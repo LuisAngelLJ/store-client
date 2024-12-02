@@ -1,0 +1,21 @@
+<div class="user-list">
+  <h2>Lista de Usuarios</h2>
+
+  <!-- Mostrar la lista de usuarios -->
+  <ul>
+    <li *ngFor="let user of users">
+      {{ user.name }} - {{ user.lastName }} - {{ user.address.city}}
+      <div>
+        <a routerLink="/edit/{{user.id}}" class="btn btn-outline-info">Editar</a>
+        <button type="button" (click)="deleteUser(user.id)" class="btn btn-outline-danger">Eliminar</button>
+      </div>
+    </li>
+  </ul>
+
+  <!-- Botones de paginación -->
+  <div class="pagination">
+    <button type="button" class="btn btn-secondary" (click)="previousPage()" [disabled]="currentPage === 0">Anterior</button>
+    <span>Página {{ currentPage + 1 }} de {{ totalPages }}</span>
+    <button type="button" class="btn btn-primary" (click)="nextPage()" [disabled]="currentPage === totalPages - 1">Siguiente</button>
+  </div>
+</div>

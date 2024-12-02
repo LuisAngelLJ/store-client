@@ -1,0 +1,38 @@
+.user-list {
+  margin: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 10px 0;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination {
+  margin-top: 20px;
+}
+
+button {
+  margin: 0 5px;
+}
+
+@media (max-width: 444px) {
+  li > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  li a,
+  li button {
+    width: 83px;
+    margin: 3px 0;
+  }
+}

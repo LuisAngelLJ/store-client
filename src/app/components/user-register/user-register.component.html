@@ -1,0 +1,53 @@
+<form (ngSubmit)="register()" class="row g-3 needs-validation" novalidate>
+  <!-- Datos del usuario -->
+  <div class="col-md-4">
+    <label for="name" class="form-label">Nombre:</label>
+    <input type="text" class="form-control" id="name" [(ngModel)]="newUser.name" name="name" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <label for="apellido" class="form-label">Apellido:</label>
+    <input type="text"  class="form-control" id="apellido" [(ngModel)]="newUser.lastName" name="lastName" required>
+    <div class="valid-feedback">
+      Looks good!
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <label for="phone" class="form-label">Teléfono:</label>
+    <input type="text" class="form-control" id="phone" [(ngModel)]="newUser.phone" name="phone" required>
+    <div class="invalid-feedback">
+      Please choose a phone.
+    </div>
+  </div>
+
+  <!-- Datos de la dirección -->
+  <h3>Dirección</h3>
+
+  <div class="col-md-4">
+    <label for="street" class="form-label">Calle:</label>
+    <input type="text" class="form-control" id="street" [(ngModel)]="newUser.address.street" name="street" required>
+  </div>
+
+  <div class="col-md-4">
+    <label for="city" class="form-label">Ciudad:</label>
+    <input type="text" class="form-control" id="city" [(ngModel)]="newUser.address.city" name="city" required>
+  </div>
+
+  <div class="col-md-4">
+    <label for="state" class="form-label">Estado:</label>
+    <input type="text" class="form-control" id="state" [(ngModel)]="newUser.address.state" name="state" required>
+  </div>
+
+  <div class="col-md-4">
+    <label for="zipCode" class="form-label">Código Postal:</label>
+    <input type="text" class="form-control" id="zipCode" [(ngModel)]="newUser.address.zipCode" name="zipCode" required>
+  </div>
+
+  <div class="col-12">
+    <button class="btn btn-success" type="submit">Registrar</button>
+  </div>
+</form>
